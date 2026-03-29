@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Send, Bot, TerminalSquare } from 'lucide-react';
 
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export default function ManagerChat() {
   const [messages, setMessages] = useState([

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { UploadCloud, Loader2, Mic, MicOff } from 'lucide-react';
 
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export default function MeetingUpload({ onProcessed }) {
   const [transcript, setTranscript] = useState('');

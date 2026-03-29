@@ -6,7 +6,7 @@ import { Flame, ShieldAlert, BarChart } from 'lucide-react';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export default function AIProductivityAnalytics({ refreshToggle }) {
   const [data, setData] = useState({ teamRisks: [], productivity: [] });

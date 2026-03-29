@@ -12,7 +12,7 @@ import AIScenarioSimulator from './AIScenarioSimulator';
 import { LayoutDashboard, CheckCircle2, TrendingUp, AlertTriangle } from 'lucide-react';
 
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export default function Dashboard() {
   const [tasks, setTasks] = useState([]);

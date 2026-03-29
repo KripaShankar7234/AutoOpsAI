@@ -3,7 +3,7 @@ import { CheckCircle2, Circle, Clock, AlertTriangle, Sparkles, Loader2 } from 'l
 
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export default function TaskBoard({ tasks, onTaskUpdated }) {
   const [sortedTasks, setSortedTasks] = React.useState(null);

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { PlayCircle, Loader2, AlertTriangle, CheckCircle2, FlaskConical } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export default function AIScenarioSimulator() {
   const [scenario, setScenario] = useState('');
