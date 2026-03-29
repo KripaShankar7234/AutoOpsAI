@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
+
 
 dotenv.config();
 
@@ -32,10 +34,13 @@ const connectDB = async () => {
 };
 connectDB();
 
-// Only listen locally 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Deployment Routing - serve Frontend statically
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
+  });
 }
 
-// Export the Express API app for Vercel Serverless
-module.exports = app;
+// Start Server unconditionally for Render
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
