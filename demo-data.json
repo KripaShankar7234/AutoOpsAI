@@ -1,0 +1,28 @@
+{
+  "decisions": [
+    "Launch beta website next Wednesday.",
+    "Use Stripe for early access."
+  ],
+  "tasks": [
+    {
+      "title": "Design landing page",
+      "owner": "Sarah",
+      "deadline": "Monday"
+    },
+    {
+      "title": "Configure production database",
+      "owner": "David",
+      "deadline": "Tuesday"
+    },
+    {
+      "title": "Integrate Stripe payments",
+      "owner": "David",
+      "deadline": "Wednesday morning"
+    },
+    {
+      "title": "Document API endpoints",
+      "owner": "Alex",
+      "deadline": "Friday this week"
+    }
+  ]
+}

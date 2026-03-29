@@ -1,0 +1,18 @@
+Project Sync: Alpha Release Prep
+Date: 25 March
+
+Alex (PM): Alright team, let's get into the Alpha release prep. We've got a lot to cover. First, the new landing page.
+Sarah (Design): I've got the mockups mostly done. The hero section needs some tweaks, but it's close.
+Alex: Okay, let's make a clear decision here. We are going to launch the beta website next Wednesday. Sarah, can you finalize the landing page design by Monday?
+Sarah: Sure, "Design landing page" by Monday is totally doable. I'll get it to Dev.
+David (Engineering): Speaking of Dev, I need to configure the production database before we push anything live. 
+Alex: Good point. David, let's put that down as a task: "Configure production database". When can you have that done?
+David: I can wrap that up by Tuesday.
+Alex: Great. We also decided last meeting to integrate Stripe for the early access program. Who is owning that?
+David: I'll take it. "Integrate Stripe payments" by Wednesday morning.
+Alex: Perfect. Let's make sure we document all API endpoints so frontend can fly. "Document API endpoints" should be done by Friday this week. I'll take that one.
+Sarah: Sounds good. 
+Alex: Let's summarize the decisions: 
+1. Launch beta website next Wednesday. 
+2. Use Stripe for early access.
+Thanks everyone, let's get to work!
